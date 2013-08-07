@@ -9,5 +9,6 @@ public class main {
     public static void main(String [] args)
     {
         System.out.println("hello world.");
+        svm_toy.main(new String[]{""});
     }
 }
