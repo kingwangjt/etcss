@@ -9,6 +9,7 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,14 +19,14 @@ import java.util.List;
  * Time: 下午6:29
  */
 public class XMLValueExtractorHandler extends DefaultHandler {
-    private List<String> data;
+    private ArrayList<String> data;
     private String currentData;
 
-    public List<String> getData() {
+    public ArrayList<String> getData() {
         return data;
     }
 
-    public List<String> getData(InputStream xmlStream,String keyName) throws ParserConfigurationException, SAXException, IOException {
+    public ArrayList<String> getData(InputStream xmlStream,String keyName) throws ParserConfigurationException, SAXException, IOException {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
         XMLValueExtractorHandler handler = new XMLValueExtractorHandler();
@@ -33,7 +34,7 @@ public class XMLValueExtractorHandler extends DefaultHandler {
         return handler.getData();
     }
 
-    public void setData(List<String> data) {
+    public void setData(ArrayList<String> data) {
         this.data = data;
     }
 

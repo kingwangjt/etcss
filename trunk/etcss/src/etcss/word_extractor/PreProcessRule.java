@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class PreProcessRule {
     public static final PreProcessRule RenrenRule = initRenrenRule();  //提供人人网的预处理规则
-    public static final PreProcessRule WeiboRule = initWeiboRule();  //提供人人网的预处理规则
+    public static final PreProcessRule WeiboRule = initWeiboRule();  //提供新浪微博的预处理规则
     private ArrayList<ReplaceRuleItem> ReplaceRule;
 
     private static final PreProcessRule initRenrenRule() {
@@ -42,16 +42,16 @@ public class PreProcessRule {
     }
 
     private static final PreProcessRule initWeiboRule() {
-        PreProcessRule renrenRule = new PreProcessRule();
+        PreProcessRule weiboRule = new PreProcessRule();
 
         //设定替换规则
-        ArrayList<ReplaceRuleItem> renrenReplaceRule = new ArrayList<ReplaceRuleItem>();
+        ArrayList<ReplaceRuleItem> weiboReplaceRule = new ArrayList<ReplaceRuleItem>();
         //todo:
 
         //todo:可能添加其他预处理规则，目前只包含字符串置换规则
 
-        renrenRule.setReplaceRule(renrenReplaceRule);  //设定预处理规则中的置换规则
-        return renrenRule;
+        weiboRule.setReplaceRule(weiboReplaceRule);  //设定预处理规则中的置换规则
+        return weiboRule;
     }
 
     public ArrayList<ReplaceRuleItem> getReplaceRule() {
