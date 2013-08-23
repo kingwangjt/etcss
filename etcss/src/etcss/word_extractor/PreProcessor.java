@@ -19,8 +19,8 @@ public class PreProcessor {
         return sentencesList;
     }
 
-    public void setSentences(ArrayList<String> m_sentences) {
-        this.sentencesList = m_sentences;
+    public void setSentences(ArrayList<String> sentences) {
+        this.sentencesList = sentences;
     }
 
     public void process(PreProcessRule rule) {
