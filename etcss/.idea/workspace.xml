@@ -7,7 +7,7 @@
     <file path="/PreProcessor.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377171724878" ignored="false" />
     <file path="/ReplaceRules.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1376884862811" ignored="false" />
     <file path="/ReplaceRule.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377176889342" ignored="false" />
-    <file path="/File Header.txt.ft" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1376893025333" ignored="false" />
+    <file path="/File Header.txt.ft" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377321519633" ignored="false" />
     <file path="/DataCollection.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377266500025" ignored="false" />
     <file path="/SAXHandler.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377081532851" ignored="false" />
     <file path="/Overridden Method Body.txt.ft" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377081193928" ignored="false" />
@@ -16,8 +16,14 @@
     <file path="/ReplaceRuleItem.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377180991552" ignored="false" />
     <file path="/PreProcessRule.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377230899934" ignored="false" />
     <file path="/main.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377266288568" ignored="false" />
-    <file path="/XMLValueExtractorHandler.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377265560662" ignored="false" />
+    <file path="/XMLValueExtractorHandler.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377320872775" ignored="false" />
     <file path="/Catch Statement Body.txt.ft" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377265805613" ignored="false" />
+    <file path="/a.dummy" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377317814975" ignored="false" />
+    <file path="/fragment.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377321577675" ignored="false" />
+    <file path="/ValueExtractor.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377319899975" ignored="false" />
+    <file path="/asdf.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377321027582" ignored="false" />
+    <file path="/adad.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377321375632" ignored="false" />
+    <file path="/asdasssdfdd.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377321583155" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +80,68 @@
         <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/main.java" line="22" class="main" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/etcss/word_extractor/XMLValueExtractorHandler.java" line="54" class="etcss.word_extractor.XMLValueExtractorHandler" package="etcss.word_extractor">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main.java" line="41" class="main" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/etcss/word_extractor/XMLValueExtractorHandler.java" line="42" class="etcss.word_extractor.XMLValueExtractorHandler" package="etcss.word_extractor">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -87,10 +154,8 @@
       <file leaf-file-name="main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="59" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="42" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,7 +163,7 @@
       <file leaf-file-name="PreProcessor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/PreProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="11" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+            <state line="25" column="16" selection-start="530" selection-end="530" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,7 +172,7 @@
       <file leaf-file-name="ValueExtractor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/ValueExtractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="56" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.0">
+            <state line="39" column="28" selection-start="1556" selection-end="1556" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,8 +181,10 @@
       <file leaf-file-name="XMLValueExtractorHandler.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/XMLValueExtractorHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="0" selection-start="1789" selection-end="1789" vertical-scroll-proportion="2.2007043">
-              <folding />
+            <state line="15" column="14" selection-start="407" selection-end="407" vertical-scroll-proportion="-1.2007042">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,10 +193,7 @@
         <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/PreProcessRule.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="47" column="87" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#603#620#0" expanded="true" />
-                <element signature="e#2019#2036#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,7 +201,7 @@
       <file leaf-file-name="ReplaceRuleItem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/ReplaceRuleItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="9" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
+            <state line="15" column="9" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -162,13 +226,16 @@
         <option value="$PROJECT_DIR$/src/etcss/word_extractor/XMLHandler.java" />
         <option value="$PROJECT_DIR$/src/etcss/word_extractor/CollectionXMLHandler.java" />
         <option value="$PROJECT_DIR$/src/etcss/word_extractor/ReplaceRule.java" />
-        <option value="$PROJECT_DIR$/src/etcss/word_extractor/ReplaceRuleItem.java" />
         <option value="$PROJECT_DIR$/src/etcss/word_extractor/PreProcessor.java" />
         <option value="$PROJECT_DIR$/src/etcss/word_extractor/PreProcessRule.java" />
-        <option value="$PROJECT_DIR$/src/etcss/word_extractor/XMLValueExtractorHandler.java" />
         <option value="$PROJECT_DIR$/src/etcss/word_extractor/DataCollection.java" />
-        <option value="$PROJECT_DIR$/src/etcss/word_extractor/ValueExtractor.java" />
         <option value="$PROJECT_DIR$/src/main.java" />
+        <option value="$PROJECT_DIR$/src/etcss/word_extractor/ReplaceRuleItem.java" />
+        <option value="$PROJECT_DIR$/src/etcss/word_extractor/ValueExtractor.java" />
+        <option value="$PROJECT_DIR$/src/etcss/word_extractor/XMLValueExtractorHandler.java" />
+        <option value="$PROJECT_DIR$/src/etcss/word_extractor/asdf.java" />
+        <option value="$PROJECT_DIR$/src/etcss/word_extractor/adad.java" />
+        <option value="$PROJECT_DIR$/src/etcss/word_extractor/asdasssdfdd.java" />
       </list>
     </option>
   </component>
@@ -290,7 +357,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -361,6 +427,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -377,14 +444,14 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="D:\DEV\JavaEE\Project\dopaMiner.parts\SentimentAnalysis\ETCSS\etcss\lib" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="Downloaded.Files.Path" value="D:\DEV\JavaEE\Project\dopaMiner.parts\SentimentAnalysis\ETCSS\etcss\lib" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -435,6 +502,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -461,19 +541,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -557,9 +624,10 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -568,19 +636,18 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23426062" sideWeight="0.6704918" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23426062" sideWeight="0.6" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -653,41 +720,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../../../../glassfish4/jdk7/jre/lib/rt.jar!/javax/xml/parsers/SAXParser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="25" selection-start="172" selection-end="172" vertical-scroll-proportion="0.2757353" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../glassfish4/jdk7/jre/lib/rt.jar!/javax/xml/parsers/SAXParserFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="35" selection-start="359" selection-end="359" vertical-scroll-proportion="0.21875" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../glassfish4/jdk7/jre/lib/rt.jar!/org/xml/sax/helpers/DefaultHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="170" selection-end="170" vertical-scroll-proportion="0.04595588" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../glassfish4/jdk7/jre/lib/rt.jar!/java/io/FileInputStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="11" selection-start="542" selection-end="542" vertical-scroll-proportion="0.33213645" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../glassfish4/jdk7/jre/lib/rt.jar!/java/util/HashMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="28" selection-start="3095" selection-end="3095" vertical-scroll-proportion="0.33274648" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../glassfish4/jdk7/jre/lib/rt.jar!/java/lang/String.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="23" selection-start="162" selection-end="162" vertical-scroll-proportion="-0.44014084" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../glassfish4/jdk7/jre/lib/rt.jar!/java/lang/Integer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="33" selection-start="549" selection-end="549" vertical-scroll-proportion="-3.3133802" />
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../../../../glassfish4/jdk7/jre/lib/rt.jar!/java/util/Map.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="21" selection-start="686" selection-end="686" vertical-scroll-proportion="0.3321859" />
@@ -703,9 +735,9 @@
         <state line="15" column="19" selection-start="367" selection-end="367" vertical-scroll-proportion="0.33213645" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/ReplaceRuleItem.java">
+    <entry file="jar://$PROJECT_DIR$/../../../../../glassfish4/jdk7/jre/lib/rt.jar!/javax/xml/parsers/SAXParser.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="9" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
+        <state line="7" column="14" selection-start="195" selection-end="195" vertical-scroll-proportion="0.2757353">
           <folding />
         </state>
       </provider>
@@ -713,40 +745,58 @@
     <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/PreProcessRule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="87" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#603#620#0" expanded="true" />
-            <element signature="e#2019#2036#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.java">
+    <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/ReplaceRuleItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="59" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="15" column="9" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/PreProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="11" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+        <state line="25" column="16" selection-start="530" selection-end="530" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../../glassfish4/jdk7/jre/lib/rt.jar!/java/io/FileInputStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="11" selection-start="542" selection-end="542" vertical-scroll-proportion="-1.5983146">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/ValueExtractor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="56" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.0">
+        <state line="39" column="28" selection-start="1556" selection-end="1556" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../../glassfish4/jdk7/jre/lib/rt.jar!/org/xml/sax/helpers/DefaultHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="16" selection-start="1427" selection-end="1427" vertical-scroll-proportion="-0.056985293">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/XMLValueExtractorHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="1789" selection-end="1789" vertical-scroll-proportion="2.2007043">
-          <folding />
+        <state line="15" column="14" selection-start="407" selection-end="407" vertical-scroll-proportion="-1.2007042">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
