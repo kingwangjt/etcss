@@ -25,7 +25,10 @@ public class PreProcessor {
 
     public void process(PreProcessRule rule) {
         for (String sentence : sentencesList) {
-
+            ArrayList<ReplaceRuleItem> replaceRuleItems=rule.getReplaceRule();
+            for (ReplaceRuleItem ruleItem : replaceRuleItems) {
+                sentence = sentence.replaceAll(ruleItem.getKey(), ruleItem.getValue());
+            }
         }
     }
 }
