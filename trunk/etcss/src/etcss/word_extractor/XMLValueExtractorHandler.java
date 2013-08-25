@@ -20,9 +20,11 @@ import java.util.ArrayList;
 
 public class XMLValueExtractorHandler extends DefaultHandler {
     private ArrayList<String> dataCollection;
-    private String currentData;
     private String lastNodeName;
     private String keyName;
+
+    public XMLValueExtractorHandler() {
+    }
 
     public ArrayList<String> getDataCollection() {
         return dataCollection;
