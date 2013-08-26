@@ -19,7 +19,7 @@ public class PreProcessRule {
         //设定替换规则
         ArrayList<ReplaceRuleItem> renrenReplaceRule = new ArrayList<ReplaceRuleItem>();
         //去除转发与点名等
-        renrenReplaceRule.add(new ReplaceRuleItem("转自.*?: ", ""));
+        renrenReplaceRule.add(new ReplaceRuleItem("转自.*?:", ""));
         renrenReplaceRule.add(new ReplaceRuleItem("@.*? ", ""));
         //表情符号替换为汉字表示。
         renrenReplaceRule.add(new ReplaceRuleItem("\\(kb\\)", "(抠鼻)"));
