@@ -41,5 +41,6 @@ public class main {
 
         PreProcessor preProcessor = new PreProcessor(sentences);
         preProcessor.process(PreProcessRule.RenrenRule);
+
     }
 }
