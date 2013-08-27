@@ -1,14 +1,15 @@
-import libsvm.*;
+package libsvmRoot;
+
 import java.io.*;
 import java.util.*;
 
 class svm_predict {
-	private static svm_print_interface svm_print_null = new svm_print_interface()
+	private static libsvmRoot.libsvm.svm_print_interface svm_print_null = new libsvmRoot.libsvm.svm_print_interface()
 	{
 		public void print(String s) {}
 	};
 
-	private static svm_print_interface svm_print_stdout = new svm_print_interface()
+	private static libsvmRoot.libsvm.svm_print_interface svm_print_stdout = new libsvmRoot.libsvm.svm_print_interface()
 	{
 		public void print(String s)
 		{
@@ -16,7 +17,7 @@ class svm_predict {
 		}
 	};
 
-	private static svm_print_interface svm_print_string = svm_print_stdout;
+	private static libsvmRoot.libsvm.svm_print_interface svm_print_string = svm_print_stdout;
 
 	static void info(String s) 
 	{
@@ -33,28 +34,28 @@ class svm_predict {
 		return Integer.parseInt(s);
 	}
 
-	private static void predict(BufferedReader input, DataOutputStream output, svm_model model, int predict_probability) throws IOException
+	private static void predict(BufferedReader input, DataOutputStream output, libsvmRoot.libsvm.svm_model model, int predict_probability) throws IOException
 	{
 		int correct = 0;
 		int total = 0;
 		double error = 0;
 		double sumv = 0, sumy = 0, sumvv = 0, sumyy = 0, sumvy = 0;
 
-		int svm_type=svm.svm_get_svm_type(model);
-		int nr_class=svm.svm_get_nr_class(model);
+		int svm_type= libsvmRoot.libsvm.svm.svm_get_svm_type(model);
+		int nr_class= libsvmRoot.libsvm.svm.svm_get_nr_class(model);
 		double[] prob_estimates=null;
 
 		if(predict_probability == 1)
 		{
-			if(svm_type == svm_parameter.EPSILON_SVR ||
-			   svm_type == svm_parameter.NU_SVR)
+			if(svm_type == libsvmRoot.libsvm.svm_parameter.EPSILON_SVR ||
+			   svm_type == libsvmRoot.libsvm.svm_parameter.NU_SVR)
 			{
-				svm_predict.info("Prob. model for test data: target value = predicted value + z,\nz: Laplace distribution e^(-|z|/sigma)/(2sigma),sigma="+svm.svm_get_svr_probability(model)+"\n");
+				svm_predict.info("Prob. model for test data: target value = predicted value + z,\nz: Laplace distribution e^(-|z|/sigma)/(2sigma),sigma="+ libsvmRoot.libsvm.svm.svm_get_svr_probability(model)+"\n");
 			}
 			else
 			{
 				int[] labels=new int[nr_class];
-				svm.svm_get_labels(model,labels);
+				libsvmRoot.libsvm.svm.svm_get_labels(model, labels);
 				prob_estimates = new double[nr_class];
 				output.writeBytes("labels");
 				for(int j=0;j<nr_class;j++)
@@ -71,18 +72,18 @@ class svm_predict {
 
 			double target = atof(st.nextToken());
 			int m = st.countTokens()/2;
-			svm_node[] x = new svm_node[m];
+			libsvmRoot.libsvm.svm_node[] x = new libsvmRoot.libsvm.svm_node[m];
 			for(int j=0;j<m;j++)
 			{
-				x[j] = new svm_node();
+				x[j] = new libsvmRoot.libsvm.svm_node();
 				x[j].index = atoi(st.nextToken());
 				x[j].value = atof(st.nextToken());
 			}
 
 			double v;
-			if (predict_probability==1 && (svm_type==svm_parameter.C_SVC || svm_type==svm_parameter.NU_SVC))
+			if (predict_probability==1 && (svm_type== libsvmRoot.libsvm.svm_parameter.C_SVC || svm_type== libsvmRoot.libsvm.svm_parameter.NU_SVC))
 			{
-				v = svm.svm_predict_probability(model,x,prob_estimates);
+				v = libsvmRoot.libsvm.svm.svm_predict_probability(model, x, prob_estimates);
 				output.writeBytes(v+" ");
 				for(int j=0;j<nr_class;j++)
 					output.writeBytes(prob_estimates[j]+" ");
@@ -90,7 +91,7 @@ class svm_predict {
 			}
 			else
 			{
-				v = svm.svm_predict(model,x);
+				v = libsvmRoot.libsvm.svm.svm_predict(model, x);
 				output.writeBytes(v+"\n");
 			}
 
@@ -104,8 +105,8 @@ class svm_predict {
 			sumvy += v*target;
 			++total;
 		}
-		if(svm_type == svm_parameter.EPSILON_SVR ||
-		   svm_type == svm_parameter.NU_SVR)
+		if(svm_type == libsvmRoot.libsvm.svm_parameter.EPSILON_SVR ||
+		   svm_type == libsvmRoot.libsvm.svm_parameter.NU_SVR)
 		{
 			svm_predict.info("Mean squared error = "+error/total+" (regression)\n");
 			svm_predict.info("Squared correlation coefficient = "+
@@ -157,10 +158,10 @@ class svm_predict {
 		{
 			BufferedReader input = new BufferedReader(new FileReader(argv[i]));
 			DataOutputStream output = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(argv[i+2])));
-			svm_model model = svm.svm_load_model(argv[i+1]);
+			libsvmRoot.libsvm.svm_model model = libsvmRoot.libsvm.svm.svm_load_model(argv[i + 1]);
 			if(predict_probability == 1)
 			{
-				if(svm.svm_check_probability_model(model)==0)
+				if(libsvmRoot.libsvm.svm.svm_check_probability_model(model)==0)
 				{
 					System.err.print("Model does not support probabiliy estimates\n");
 					System.exit(1);
@@ -168,7 +169,7 @@ class svm_predict {
 			}
 			else
 			{
-				if(svm.svm_check_probability_model(model)!=0)
+				if(libsvmRoot.libsvm.svm.svm_check_probability_model(model)!=0)
 				{
 					svm_predict.info("Model supports probability estimates, but disabled in prediction.\n");
 				}

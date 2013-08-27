@@ -3,7 +3,8 @@
 
 
 
-package libsvm;
+package libsvmRoot.libsvm;
+
 import java.io.*;
 import java.util.*;
 

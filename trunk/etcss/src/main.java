@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class main {
     public static void main(String[] args) {
         System.out.println("hello world.");
-        ////svm_toy.main(new String[]{""});
+        //svm_toy.main(new String[]{""});
 
         final String MESSAGE_KEY_NAME = "message";
         String TEST_FilePath = "F:\\status_test_utf-8.xml";
