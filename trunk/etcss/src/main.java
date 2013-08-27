@@ -22,7 +22,7 @@ public class main {
         //svm_toy.main(new String[]{""});
 
         final String MESSAGE_KEY_NAME = "message";
-        String TEST_FilePath = "F:\\status_test_utf-8.xml";
+        String TEST_FilePath = "F:\\status_test_utf-8-2.xml";
         ArrayList<String> sentences;
         try {
             //获得单个xml中所有状态
@@ -65,6 +65,7 @@ public class main {
             SegResult seg_res = segTag.split(sentence);
             System.out.println(seg_res.getFinalResult());
         }
+        //todo: 关注词性：/v /a /ad.
 
     }
 }

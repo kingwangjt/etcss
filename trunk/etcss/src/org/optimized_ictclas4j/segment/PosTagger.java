@@ -747,6 +747,9 @@ public class PosTagger {
 
         if (sns != null && unknownDict != null && context != null) {
             for (int i = startPos; i < startPos + length; i++) {
+                if (i>=sns.size()){
+                    break;
+                }
                 SegNode sn = sns.get(i);
                 int bestTag = getBestTag(sn);
                 if (bestTag != -1) {

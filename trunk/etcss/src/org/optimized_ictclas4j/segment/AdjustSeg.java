@@ -317,6 +317,9 @@ public class AdjustSeg {
                     wr2.setWord(wr.getSrcWord());
                     wr2.setPos(POSTag.NOUN_LETTER);
                     while (true) {
+                        if (i + 1>=optSegPath.size()){
+                            break;
+                        }
                         SegNode nextSN = optSegPath.get(i + 1);
                         if (nextSN.getPos() == POSTag.NOUN_LETTER || ".．-－".contains(nextSN.getSrcWord())
                                 || (nextSN.getPos() == POSTag.NUM && Utility.isAllNum(nextSN.getSrcWord()))) {
