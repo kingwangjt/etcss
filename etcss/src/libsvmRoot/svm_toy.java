@@ -1,4 +1,5 @@
-import libsvm.*;
+package libsvmRoot;
+
 import java.applet.*;
 import java.awt.*;
 import java.util.*;
@@ -161,11 +162,11 @@ public class svm_toy extends Applet {
 		// guard
 		if(point_list.isEmpty()) return;
 
-		svm_parameter param = new svm_parameter();
+		libsvmRoot.libsvm.svm_parameter param = new libsvmRoot.libsvm.svm_parameter();
 
 		// default values
-		param.svm_type = svm_parameter.C_SVC;
-		param.kernel_type = svm_parameter.RBF;
+		param.svm_type = libsvmRoot.libsvm.svm_parameter.C_SVC;
+		param.kernel_type = libsvmRoot.libsvm.svm_parameter.RBF;
 		param.degree = 3;
 		param.gamma = 0;
 		param.coef0 = 0;
@@ -255,31 +256,31 @@ public class svm_toy extends Applet {
 		}
 
 		// build problem
-		svm_problem prob = new svm_problem();
+		libsvmRoot.libsvm.svm_problem prob = new libsvmRoot.libsvm.svm_problem();
 		prob.l = point_list.size();
 		prob.y = new double[prob.l];
 
-		if(param.kernel_type == svm_parameter.PRECOMPUTED)
+		if(param.kernel_type == libsvmRoot.libsvm.svm_parameter.PRECOMPUTED)
 		{
 		}
-		else if(param.svm_type == svm_parameter.EPSILON_SVR ||
-			param.svm_type == svm_parameter.NU_SVR)
+		else if(param.svm_type == libsvmRoot.libsvm.svm_parameter.EPSILON_SVR ||
+			param.svm_type == libsvmRoot.libsvm.svm_parameter.NU_SVR)
 		{
 			if(param.gamma == 0) param.gamma = 1;
-			prob.x = new svm_node[prob.l][1];
+			prob.x = new libsvmRoot.libsvm.svm_node[prob.l][1];
 			for(int i=0;i<prob.l;i++)
 			{
 				point p = point_list.elementAt(i);
-				prob.x[i][0] = new svm_node();
+				prob.x[i][0] = new libsvmRoot.libsvm.svm_node();
 				prob.x[i][0].index = 1;
 				prob.x[i][0].value = p.x;
 				prob.y[i] = p.y;
 			}
 
 			// build model & classify
-			svm_model model = svm.svm_train(prob, param);
-			svm_node[] x = new svm_node[1];
-			x[0] = new svm_node();
+			libsvmRoot.libsvm.svm_model model = libsvmRoot.libsvm.svm.svm_train(prob, param);
+			libsvmRoot.libsvm.svm_node[] x = new libsvmRoot.libsvm.svm_node[1];
+			x[0] = new libsvmRoot.libsvm.svm_node();
 			x[0].index = 1;
 			int[] j = new int[XLEN];
 
@@ -287,7 +288,7 @@ public class svm_toy extends Applet {
 			for (int i = 0; i < XLEN; i++)
 			{
 				x[0].value = (double) i / XLEN;
-				j[i] = (int)(YLEN*svm.svm_predict(model, x));
+				j[i] = (int)(YLEN* libsvmRoot.libsvm.svm.svm_predict(model, x));
 			}
 			
 			buffer_gc.setColor(colors[0]);
@@ -308,7 +309,7 @@ public class svm_toy extends Applet {
 				buffer_gc.drawLine(i-1,j[i-1],i,j[i]);
 				window_gc.drawLine(i-1,j[i-1],i,j[i]);
 
-				if(param.svm_type == svm_parameter.EPSILON_SVR)
+				if(param.svm_type == libsvmRoot.libsvm.svm_parameter.EPSILON_SVR)
 				{
 					buffer_gc.setColor(colors[2]);
 					window_gc.setColor(colors[2]);
@@ -325,24 +326,24 @@ public class svm_toy extends Applet {
 		else
 		{
 			if(param.gamma == 0) param.gamma = 0.5;
-			prob.x = new svm_node [prob.l][2];
+			prob.x = new libsvmRoot.libsvm.svm_node[prob.l][2];
 			for(int i=0;i<prob.l;i++)
 			{
 				point p = point_list.elementAt(i);
-				prob.x[i][0] = new svm_node();
+				prob.x[i][0] = new libsvmRoot.libsvm.svm_node();
 				prob.x[i][0].index = 1;
 				prob.x[i][0].value = p.x;
-				prob.x[i][1] = new svm_node();
+				prob.x[i][1] = new libsvmRoot.libsvm.svm_node();
 				prob.x[i][1].index = 2;
 				prob.x[i][1].value = p.y;
 				prob.y[i] = p.value;
 			}
 
 			// build model & classify
-			svm_model model = svm.svm_train(prob, param);
-			svm_node[] x = new svm_node[2];
-			x[0] = new svm_node();
-			x[1] = new svm_node();
+			libsvmRoot.libsvm.svm_model model = libsvmRoot.libsvm.svm.svm_train(prob, param);
+			libsvmRoot.libsvm.svm_node[] x = new libsvmRoot.libsvm.svm_node[2];
+			x[0] = new libsvmRoot.libsvm.svm_node();
+			x[1] = new libsvmRoot.libsvm.svm_node();
 			x[0].index = 1;
 			x[1].index = 2;
 
@@ -351,8 +352,8 @@ public class svm_toy extends Applet {
 				for (int j = 0; j < YLEN ; j++) {
 					x[0].value = (double) i / XLEN;
 					x[1].value = (double) j / YLEN;
-					double d = svm.svm_predict(model, x);
-					if (param.svm_type == svm_parameter.ONE_CLASS && d<0) d=2;
+					double d = libsvmRoot.libsvm.svm.svm_predict(model, x);
+					if (param.svm_type == libsvmRoot.libsvm.svm_parameter.ONE_CLASS && d<0) d=2;
 					buffer_gc.setColor(colors[(int)d]);
 					window_gc.setColor(colors[(int)d]);
 					buffer_gc.drawLine(i,j,i,j);
@@ -377,7 +378,7 @@ public class svm_toy extends Applet {
 		try {
 			DataOutputStream fp = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(filename)));
 
-			int svm_type = svm_parameter.C_SVC;
+			int svm_type = libsvmRoot.libsvm.svm_parameter.C_SVC;
 			int svm_type_idx = args.indexOf("-s ");
 			if(svm_type_idx != -1)
 			{
@@ -386,7 +387,7 @@ public class svm_toy extends Applet {
 			}
 
 			int n = point_list.size();
-			if(svm_type == svm_parameter.EPSILON_SVR || svm_type == svm_parameter.NU_SVR)
+			if(svm_type == libsvmRoot.libsvm.svm_parameter.EPSILON_SVR || svm_type == libsvmRoot.libsvm.svm_parameter.NU_SVR)
 			{
 				for(int i=0;i<n;i++)
 				{

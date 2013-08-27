@@ -1,7 +1,7 @@
-import libsvm.*;
+package libsvmRoot;
+
 import java.io.*;
 import java.util.*;
-import java.text.DecimalFormat;
 
 class svm_scale
 {
