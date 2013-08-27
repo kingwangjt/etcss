@@ -15,7 +15,7 @@
     <file path="/XMLHandler.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377169910554" ignored="false" />
     <file path="/ReplaceRuleItem.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377339679937" ignored="false" />
     <file path="/PreProcessRule.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377230899934" ignored="false" />
-    <file path="/main.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377593996479" ignored="false" />
+    <file path="/main.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377595363300" ignored="false" />
     <file path="/XMLValueExtractorHandler.java" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377320872775" ignored="false" />
     <file path="/Catch Statement Body.txt.ft" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377265805613" ignored="false" />
     <file path="/a.dummy" changelist="95e47d2d-d84b-4420-adf2-101d0afe21f5" time="1377317814975" ignored="false" />
@@ -79,7 +79,23 @@
         <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/main.java" line="65" class="main" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -93,8 +109,30 @@
       <file leaf-file-name="main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="56" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.47761193">
+            <state line="50" column="12" selection-start="1682" selection-end="1682" vertical-scroll-proportion="0.21864952">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SegTag.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../ChineseWordSegment/optimized-ictclas4j/optimized-ictclas4j/src/org/optimized_ictclas4j/segment/SegTag.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SegTagTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../ChineseWordSegment/optimized-ictclas4j/optimized-ictclas4j/src/test/optimized_ictclas4j/main/SegTagTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="65" selection-start="1312" selection-end="1357" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,7 +159,9 @@
         <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/XMLValueExtractorHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="19" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,7 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/svm_toy.java" />
         <option value="$PROJECT_DIR$/src/etcss/word_extractor/ReplaceRules.java" />
         <option value="$PROJECT_DIR$/src/etcss/word_extractor/SAXHandler.java" />
         <option value="$PROJECT_DIR$/src/etcss/word_extractor/XMLHandler.java" />
@@ -163,6 +202,7 @@
         <option value="$PROJECT_DIR$/src/etcss/word_extractor/ReplaceRuleItem.java" />
         <option value="$PROJECT_DIR$/src/etcss/word_extractor/PreProcessor.java" />
         <option value="$PROJECT_DIR$/src/etcss/word_extractor/PreProcessRule.java" />
+        <option value="$PROJECT_DIR$/../../../ChineseWordSegment/optimized-ictclas4j/optimized-ictclas4j/src/test/optimized_ictclas4j/main/SegTagTest.java" />
         <option value="$PROJECT_DIR$/src/main.java" />
       </list>
     </option>
@@ -294,12 +334,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="etcss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="etcss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="etcss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="etcss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
@@ -308,6 +372,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.keymap" />
     <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ChineseWordSegment/optimized-ictclas4j/optimized-ictclas4j" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -588,27 +653,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/XMLValueExtractorHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="14" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/PreProcessRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="87" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/ReplaceRuleItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="9" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../../../../glassfish4/jdk7/jre/lib/rt.jar!/java/util/Map.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="21" selection-start="686" selection-end="686" vertical-scroll-proportion="0.3321859" />
@@ -668,7 +712,9 @@
     <entry file="file://$PROJECT_DIR$/src/etcss/word_extractor/XMLValueExtractorHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -679,10 +725,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../ChineseWordSegment/optimized-ictclas4j/optimized-ictclas4j/src/test/optimized_ictclas4j/main/SegTagTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="65" selection-start="1312" selection-end="1357" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../ChineseWordSegment/optimized-ictclas4j/optimized-ictclas4j/src/org/optimized_ictclas4j/segment/SegTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="56" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.47761193">
-          <folding />
+        <state line="50" column="12" selection-start="1682" selection-end="1682" vertical-scroll-proportion="0.21864952">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -744,7 +808,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
