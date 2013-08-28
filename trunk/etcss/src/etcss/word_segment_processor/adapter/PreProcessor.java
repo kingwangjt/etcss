@@ -1,4 +1,7 @@
-package etcss.word_extractor;
+package etcss.word_segment_processor.adapter;
+
+import etcss.word_segment_processor.bean.PreProcessRule;
+import etcss.word_segment_processor.bean.ReplaceRuleItem;
 
 import java.util.ArrayList;
 
