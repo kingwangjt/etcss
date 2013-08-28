@@ -1,4 +1,4 @@
-package etcss.word_extractor;
+package etcss.word_segment_processor.bean;
 
 import java.util.AbstractMap;
 

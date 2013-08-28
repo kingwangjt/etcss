@@ -1,6 +1,7 @@
-import etcss.word_extractor.PreProcessRule;
-import etcss.word_extractor.PreProcessor;
-import etcss.word_extractor.ValueExtractor;
+import etcss.word_segment_processor.bean.PreProcessRule;
+import etcss.word_segment_processor.adapter.PreProcessor;
+import etcss.word_segment_processor.utils.POSFilter;
+import etcss.word_segment_processor.utils.ValueExtractor;
 import org.optimized_ictclas4j.bean.SegResult;
 import org.optimized_ictclas4j.segment.SegTag;
 import org.xml.sax.SAXException;
@@ -61,11 +62,16 @@ public class main {
 
         System.out.println("Start segment:");
 
+        final String[] POS_FILTER=new String[]{"/v","/a","/ad"};
         for (String sentence : sentences) {
             SegResult seg_res = segTag.split(sentence);
-            System.out.println(seg_res.getFinalResult());
+            String segResult=seg_res.getFinalResult();
+            ArrayList<String> filteredWords = POSFilter.FilterWordsFromSentence(segResult, POS_FILTER);
+            System.out.println(filteredWords);
         }
-        //todo: 关注词性：/v /a /ad.
 
+        //[推荐/v, 知/v, 还要/v, 好/a, 用/v, 随便/ad, 拿/v, 出/v, 应该/v, 能/v, 搜/v, 到/v, 神奇/a, 好/a, 用/v, 是/v, 做/v, 回顾/v, 可以/v, 下载/v, 精确/ad, 到/v, 推荐/v, 知/v, 还要/v, 好/a, 用/v, 随便/ad, 拿/v, 出/v, 应该/v, 能/v, 搜/v, 到/v, 神奇/a, 好/a, 用/v, 是/v, 做/v, 回顾/v, 可以/v, 下载/v, 精确/ad, 到/v]
+
+        //todo: 关注词性：/v /a /ad.
     }
 }
