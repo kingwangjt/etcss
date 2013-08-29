@@ -27,11 +27,11 @@ public class PreProcessor {
     }
 
     public void process(PreProcessRule rule) {
-        for (int i=0;i< sentencesList.size();i++) {
+        for (int i = 0; i < sentencesList.size(); i++) {
             ArrayList<ReplaceRuleItem> replaceRuleItems = rule.getReplaceRule();
             for (ReplaceRuleItem ruleItem : replaceRuleItems) {
                 String s = sentencesList.get(i).replaceAll(ruleItem.getKey(), ruleItem.getValue());
-                sentencesList.set(i,s);
+                sentencesList.set(i, s);
             }
         }
     }

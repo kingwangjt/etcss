@@ -8,7 +8,7 @@ import java.util.AbstractMap;
  * Date: 13-8-22
  * Time: 下午9:09
  */
-public class ReplaceRuleItem extends AbstractMap.SimpleEntry<String,String> {
+public class ReplaceRuleItem extends AbstractMap.SimpleEntry<String, String> {
     public ReplaceRuleItem(String s, String s2) {
         super(s, s2);
         if (s == null) {
