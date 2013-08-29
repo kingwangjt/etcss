@@ -317,7 +317,7 @@ public class AdjustSeg {
                     wr2.setWord(wr.getSrcWord());
                     wr2.setPos(POSTag.NOUN_LETTER);
                     while (true) {
-                        if (i + 1>=optSegPath.size()){
+                        if (i + 1 >= optSegPath.size()) {
                             break;
                         }
                         SegNode nextSN = optSegPath.get(i + 1);

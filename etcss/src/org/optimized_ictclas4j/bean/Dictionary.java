@@ -609,7 +609,7 @@ public class Dictionary {
             result = new PreWord();
             result.setWord(word);
 
-            if (begin > end){
+            if (begin > end) {
                 result.setWord(null);
                 return result;
             }
@@ -652,7 +652,7 @@ public class Dictionary {
                 int found = findInOriginalTable(pw.getIndex(), pw.getRes(), -1);
                 if (found == -1) {
                     ArrayList<WordItem> wis = wts.get(pw.getIndex()).getWords();
-                    if (wis==null) {
+                    if (wis == null) {
                         return null;
                     }
                     for (int j = 0; j < wis.size(); j++) {

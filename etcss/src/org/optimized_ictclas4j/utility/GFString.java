@@ -902,7 +902,6 @@ public class GFString {
 
     /**
      * 把字节数组转化成十六进制的字符串
-     *
      */
     public static String bytes2hex(byte[] b) {
         String result = "";

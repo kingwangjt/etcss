@@ -119,8 +119,8 @@ public class ValueExtractor {
 
         @Override
         public void characters(char[] ch, int start, int length) throws SAXException {
-                String content = new String(ch,start,length);
-            if (this.keyName.equals(this.lastNodeName)){
+            String content = new String(ch, start, length);
+            if (this.keyName.equals(this.lastNodeName)) {
                 dataCollection.add(content);
             }
         }
