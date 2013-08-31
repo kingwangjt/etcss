@@ -94,7 +94,7 @@ public class ValueExtractor {
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser parser = factory.newSAXParser();
             XMLValueExtractorHandler handler = new XMLValueExtractorHandler();
-            handler.setKeyName(keyName);  //这里设置handler的keyName很重要，因为handler是当前类的新实例。
+            handler.setKeyName(keyName);  //在这里设置keyName很重要，因为handler是当前类的新实例。
             parser.parse(xmlStream, handler);
             return handler.getDataCollection();
         }

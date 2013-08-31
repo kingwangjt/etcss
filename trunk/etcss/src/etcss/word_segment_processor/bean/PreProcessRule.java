@@ -46,7 +46,7 @@ public class PreProcessRule {
 
         //设定替换规则
         ArrayList<ReplaceRuleItem> weiboReplaceRule = new ArrayList<ReplaceRuleItem>();
-        //todo:
+        //todo:完成微博规则
 
         //todo:可能添加其他预处理规则，目前只包含字符串置换规则
 
