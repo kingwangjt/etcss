@@ -13,8 +13,8 @@ import java.io.FileNotFoundException;
  */
 public class SegmentLoader {
     public static SegTag LoadSegmentTagger(int segPathCount) {
-        SimpleLogger.Log("Loading dictionaries, please wait . . .");
-        System.out.println("(This may take a few minutes.)");
+        JavaConsoleLogger.Log("Loading dictionaries . . .", JavaConsoleLogger.MessagePriorityLevel.Log);
+        JavaConsoleLogger.Log("(This may take a few minutes.)", JavaConsoleLogger.MessagePriorityLevel.Log);
         long startTime = System.currentTimeMillis();  //计时开始
 
         SegTag segTag;
@@ -26,7 +26,8 @@ public class SegmentLoader {
         }
 
         long endTime = System.currentTimeMillis();  //计时结束
-        System.out.println("All dictionaries loaded." + " (within " + (endTime - startTime) + " milliseconds.)");
+        JavaConsoleLogger.Log("All dictionaries loaded." + " (within " + (endTime - startTime) + " milliseconds.)"
+                , JavaConsoleLogger.MessagePriorityLevel.Log);
         return segTag;
     }
 }

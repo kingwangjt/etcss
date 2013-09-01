@@ -1,4 +1,6 @@
 import etcss.word_segment_processor.tools.Xml2PosedWordsWorker;
+import etcss.word_segment_processor.utils.JavaConsoleLogger;
+import etcss.word_segment_processor.utils.SimpleLogger;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -14,7 +16,6 @@ import java.util.HashSet;
  */
 public class main {
     public static void main(String[] args) {
-        System.out.println("hello world.");
         //svm_toy.main(new String[]{""});
 
         final String TEST_FilePath_1 = "F:\\status_test_utf-8.xml";
@@ -25,8 +26,11 @@ public class main {
         fileList.add(TEST_FilePath_1);
         fileList.add(TEST_FilePath_2);
 
+        JavaConsoleLogger.SetMuteLevel(SimpleLogger.MuteLevel.Log);
         Xml2PosedWordsWorker xml2PosedWordsWorker = new Xml2PosedWordsWorker(fileList, WANTED_POS);
         HashSet<String> posedWords = xml2PosedWordsWorker.doWork();
+        JavaConsoleLogger.Log("Logging " + posedWords.size() + " posed words entries . . ."
+                , JavaConsoleLogger.MessagePriorityLevel.Log);
         BufferedWriter bufferedWriter;
         try {
             bufferedWriter = new BufferedWriter(new FileWriter("C:\\a.csv"));
@@ -36,10 +40,12 @@ public class main {
                     bufferedWriter.write(",");
                 }
                 bufferedWriter.write(word);
-                isFirstWord=false;
+                isFirstWord = false;
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+        JavaConsoleLogger.Log("Logging complete, " + posedWords.size() + " words successfully logged."
+                , JavaConsoleLogger.MessagePriorityLevel.Log);
     }
 }
