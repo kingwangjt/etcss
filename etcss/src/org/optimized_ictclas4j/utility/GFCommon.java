@@ -6,6 +6,8 @@
  */
 package org.optimized_ictclas4j.utility;
 
+import etcss.word_segment_processor.utils.JavaConsoleLogger;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -330,7 +332,7 @@ public class GFCommon {
                 conn = DriverManager.getConnection(url, userName, pwd);
                 if (conn != null) {
                     String str = "建立和远程数据库的连接!";
-                    System.out.println(str);
+                    JavaConsoleLogger.Log(str, JavaConsoleLogger.MessagePriorityLevel.Log);
                 }
             } catch (ClassNotFoundException e) {
             } catch (SQLException e) {

@@ -52,7 +52,7 @@ public class Xml2PosedWordsWorker implements Workable {
     public HashSet<String> doWork() {
         HashSet<String> resultHashSet = new HashSet<String>();
 
-        SegTag segTag= SegmentLoader.LoadSegmentTagger(1);
+        SegTag segTag = SegmentLoader.LoadSegmentTagger(1);
         for (String path : xmlPathCollection) {
             ArrayList<String> sentences;
             try {
