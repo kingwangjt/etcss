@@ -13,6 +13,7 @@ import java.io.FileNotFoundException;
  */
 public class SegmentLoader {
     public static SegTag LoadSegmentTagger(int segPathCount) {
+        JavaConsoleLogger.Log("Creating segment tagger with [" + segPathCount + "] segment path(s) . . .", JavaConsoleLogger.MessagePriorityLevel.Log);
         JavaConsoleLogger.Log("Loading dictionaries . . .", JavaConsoleLogger.MessagePriorityLevel.Log);
         JavaConsoleLogger.Log("(This may take a few minutes.)", JavaConsoleLogger.MessagePriorityLevel.Log);
         long startTime = System.currentTimeMillis();  //计时开始

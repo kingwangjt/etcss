@@ -3,6 +3,7 @@ package etcss.word_segment_processor.tools;
 import etcss.word_segment_processor.adapter.POSFilter;
 import etcss.word_segment_processor.adapter.PreProcessor;
 import etcss.word_segment_processor.bean.PreProcessRule;
+import etcss.word_segment_processor.utils.JavaConsoleLogger;
 import etcss.word_segment_processor.utils.SegmentLoader;
 import etcss.word_segment_processor.utils.ValueExtractor;
 import org.optimized_ictclas4j.bean.SegResult;
@@ -22,7 +23,7 @@ import java.util.HashSet;
  *
  * @author Wings
  */
-public class Xml2PosedWordsWorker implements Workable {
+public class Xml2PosedWordsWorker {
     private static final String RENREN_MESSAGE_KEY_NAME = "message";
     private ArrayList<String> xmlPathCollection;
     private String[] wantedPOS;
@@ -48,16 +49,22 @@ public class Xml2PosedWordsWorker implements Workable {
         this.wantedPOS = wantedPOS;
     }
 
-    @Override
-    public HashSet<String> doWork() {
-        HashSet<String> resultHashSet = new HashSet<String>();
+    public HashSet<String> getWords() {
+        return this.getWords(false);
+    }
 
-        SegTag segTag = SegmentLoader.LoadSegmentTagger(1);
+    public HashSet<String> getWords(boolean withPosLabel) {
+        HashSet<String> resultHashSet = new HashSet<String>();
+        final int SEG_PATH_COUNT = 1;
+        SegTag segTag = SegmentLoader.LoadSegmentTagger(SEG_PATH_COUNT);
+        JavaConsoleLogger.Log("Extracting sentences . . .", JavaConsoleLogger.MessagePriorityLevel.Log);
         for (String path : xmlPathCollection) {
             ArrayList<String> sentences;
             try {
                 //获得单个xml中所有状态
-                sentences = ValueExtractor.ExtractValuesFromFile(path, RENREN_MESSAGE_KEY_NAME, ValueExtractor.FileFormat.XML);
+                sentences = ValueExtractor.ExtractValuesFromFile(path,
+                        RENREN_MESSAGE_KEY_NAME,
+                        ValueExtractor.FileFormat.XML);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
                 return null;
@@ -75,12 +82,13 @@ public class Xml2PosedWordsWorker implements Workable {
             preProcessor.process(PreProcessRule.RenrenRule);
 
             final String[] POS_WHITE_LIST = new String[]{"/v", "/a", "/ad"};
-
+            JavaConsoleLogger.Log("Extracting posed words entries from sentences, file path: " +
+                    path, JavaConsoleLogger.MessagePriorityLevel.Log);
             POSFilter filteredWords = new POSFilter();
             for (String sentence : sentences) {
                 SegResult seg_res = segTag.split(sentence);
                 String segResult = seg_res.getFinalResult();
-                filteredWords.addWordsFromSentence(segResult, POS_WHITE_LIST);
+                filteredWords.addWordsFromSentence(segResult, POS_WHITE_LIST, withPosLabel);
             }
             resultHashSet.addAll(filteredWords.getWordsSet());
         }

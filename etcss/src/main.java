@@ -28,24 +28,28 @@ public class main {
 
         JavaConsoleLogger.SetMuteLevel(SimpleLogger.MuteLevel.Log);
         Xml2PosedWordsWorker xml2PosedWordsWorker = new Xml2PosedWordsWorker(fileList, WANTED_POS);
-        HashSet<String> posedWords = xml2PosedWordsWorker.doWork();
+        HashSet<String> posedWords = xml2PosedWordsWorker.getWords(true);
         JavaConsoleLogger.Log("Logging " + posedWords.size() + " posed words entries . . ."
                 , JavaConsoleLogger.MessagePriorityLevel.Log);
         BufferedWriter bufferedWriter;
+        final String LOG_FILE_PATH = "C:\\a.csv";
         try {
-            bufferedWriter = new BufferedWriter(new FileWriter("C:\\a.csv"));
+            bufferedWriter = new BufferedWriter(new FileWriter(LOG_FILE_PATH));
             boolean isFirstWord = true;
             for (String word : posedWords) {
                 if (!isFirstWord) {
                     bufferedWriter.write(",");
+                    bufferedWriter.newLine();
                 }
                 bufferedWriter.write(word);
                 isFirstWord = false;
             }
+            bufferedWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
         JavaConsoleLogger.Log("Logging complete, " + posedWords.size() + " words successfully logged."
                 , JavaConsoleLogger.MessagePriorityLevel.Log);
+        JavaConsoleLogger.Log("Log file: " + LOG_FILE_PATH, JavaConsoleLogger.MessagePriorityLevel.Log);
     }
 }
