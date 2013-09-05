@@ -22,11 +22,12 @@ public class POSFilter {
         return wordsSet;
     }
 
-    public void addWordsFromSentence(String segResultSentence, String[] filter) {
+    public void addWordsFromSentence(String segResultSentence, String[] filter, boolean withPosLabel) {
         String[] allWords = segResultSentence.split(SPLITTER);
         for (String word : allWords) {
             for (String filterItem : filter) {
                 if (word.endsWith(filterItem)) {
+                    word = withPosLabel ? word : word.substring(0, word.lastIndexOf("/"));
                     this.wordsSet.add(word);
                 }
             }
